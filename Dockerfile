@@ -39,7 +39,7 @@ RUN apt-get autoclean \
     && rm -rf /var/lib/apt/lists/*
 
 # expose Volumes
-VOLUME /input /output /scripts
+RUN mkdir input output scripts
 
 #set direcotries
 WORKDIR /root
