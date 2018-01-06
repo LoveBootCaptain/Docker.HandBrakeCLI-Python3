@@ -28,9 +28,9 @@ lovebootcaptain/handbrakecli-python3:latest
 
 `LoopConverter [file extension to convert]`
 
-- uses `convert` on any file in a folder that matches the `[file extension]
+- uses `convert` on any file in a folder that matches the `[file extension]`
 
 **Example**
 
 - `convert my_funny_video.mkv`
-- `LoopConverter mky /path/to/your/folder/`
+- `LoopConverter mkv /path/to/your/folder/`
