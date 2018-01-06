@@ -1,10 +1,10 @@
 # Docker.HandBrakeCLI-Python3
 HandBrakeCLI + Python3 in a Docker
 
-![docker build status](https://img.shields.io/docker/build/lovebootcaptain/handbrakecli-python3.svg)
-![docker build](https://img.shields.io/docker/automated/lovebootcaptain/handbrakecli-python3.svg)
-![docker pulls](https://img.shields.io/docker/pulls/lovebootcaptain/handbrakecli-python3.svg)
-![docker stars](https://img.shields.io/docker/stars/lovebootcaptain/handbrakecli-python3.svg)
+![docker build status](https://img.shields.io/docker/build/lovebootcaptain/handbrakecli-python3.svg?style=flat-square)
+![docker build](https://img.shields.io/docker/automated/lovebootcaptain/handbrakecli-python3.svg?style=flat-square)
+![docker pulls](https://img.shields.io/docker/pulls/lovebootcaptain/handbrakecli-python3.svg?style=flat-square)
+![docker stars](https://img.shields.io/docker/stars/lovebootcaptain/handbrakecli-python3.svg?style=flat-square)
 
 ## Pull
 
