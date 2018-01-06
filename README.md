@@ -37,7 +37,7 @@ feel free to add and/or **contribute** your own.
 
 `LoopConverter [file extension to convert]`
 
-- uses `convert` on any file in a folder that matches the `[file extension]
+- uses `convert` on any file in a folder that matches the `[file extension]`
 
 **Example**
 
