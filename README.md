@@ -22,6 +22,7 @@ docker run
 --entrypoint bash
 -v /Volumes/video:/root/input
 -v /Volumes/video/transcoded:/root/output
+--env SETLANG=de_DE.UTF-8
 --env LC_ALL=de_DE.UTF-8
 --env LANG=de_DE.UTF-8
 --env LANGUAGE=de_DE:de
