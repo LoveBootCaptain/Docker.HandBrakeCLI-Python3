@@ -20,7 +20,7 @@ if [ $# -eq 0 ]
             do
                 if [ "${i}" != "${i%.${EXT}}" ];then
                     echo "converting file $i"
-                    # convert "$i"
+                    convert "$i"
                 fi
         done
 fi
