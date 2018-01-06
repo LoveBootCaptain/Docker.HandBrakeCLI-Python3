@@ -27,6 +27,10 @@ lovebootcaptain/handbrakecli-python3:latest
 ```
 ## Usage of included scripts
 
+the `scripts` folder is added to the `PATH` so you can use any of the scripts directly from your shell.
+
+feel free to add and/or **contribute** your own.
+
 `convert` 
 
 - lets you convert a single file
@@ -39,3 +43,9 @@ lovebootcaptain/handbrakecli-python3:latest
 
 - `convert my_funny_video.mkv`
 - `LoopConverter mkv /path/to/your/folder/`
+
+### TODO
+
+- add a watchdog for a folder with python3
+- make watchdog configurable with ENV-variables for `docker run`
+- make `convert` script configurable with ENV-variables for `docker run`
