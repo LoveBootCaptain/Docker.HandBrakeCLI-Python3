@@ -2,6 +2,7 @@
 
 NOW=$(date +"%m%d%Y")
 PGMNAME=/usr/bin/HandBrakeCLI
+
 check_errs()
 {
     # Function. Parameter 1 is the return code
@@ -24,5 +25,3 @@ check_errs $? "Failed to convert file $1"
 echo "Removing original file."
 rm -f "$1"
 check_errs $? "Failed to remove original file $1"
-
-exit

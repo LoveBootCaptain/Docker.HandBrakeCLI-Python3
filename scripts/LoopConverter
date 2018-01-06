@@ -1,16 +1,27 @@
 #!/bin/sh
 
-EXT=ts
+EXT=$1
 
-for i in *; do
-    if [ "${i}" != "${i%.${EXT}}" ];then
-        echo "convertible file found: $i"
-    fi
-done
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    echo "usage:    LoopConverter [file extension to convert]"
+    echo "e.g.:     LoopConverter mkv /path/to/your/folder"
 
-for i in *; do
-    if [ "${i}" != "${i%.${EXT}}" ];then
-        echo "converting file $i"
-        convert "$i"
-    fi
-done
+    else
+        for i in *
+            do
+                if [ "${i}" != "${i%.${EXT}}" ];then
+                echo "convertible file found: $i"
+            fi
+        done
+
+        for i in *
+            do
+                if [ "${i}" != "${i%.${EXT}}" ];then
+                    echo "converting file $i"
+                    # convert "$i"
+                fi
+        done
+fi
+
