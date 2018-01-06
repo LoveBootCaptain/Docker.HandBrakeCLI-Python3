@@ -1,0 +1,16 @@
+#!/bin/sh
+
+EXT=ts
+
+for i in *; do
+    if [ "${i}" != "${i%.${EXT}}" ];then
+        echo "convertible file found: $i"
+    fi
+done
+
+for i in *; do
+    if [ "${i}" != "${i%.${EXT}}" ];then
+        echo "converting file $i"
+        convert "$i"
+    fi
+done
