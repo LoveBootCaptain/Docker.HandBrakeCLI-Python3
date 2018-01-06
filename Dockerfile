@@ -6,7 +6,7 @@ ARG SETLANG
 # setup ENV
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
-ENV PATH /root/scripts/:$PATH
+ENV PATH /root/scripts:$PATH
 
 # set and update repo
 RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list \
@@ -45,6 +45,8 @@ WORKDIR /root
 
 # create mount folders
 RUN mkdir input output
+
+ADD scripts /root/scripts
 
 # set entrypoint
 ENTRYPOINT bash
