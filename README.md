@@ -1,6 +1,11 @@
 # Docker.HandBrakeCLI-Python3
 HandBrakeCLI + Python3 in a Docker
 
+## Pull
+
+```bash
+docker pull lovebootcaptain/handbrakecli-python3
+```
 
 ## Build
 ```bash
@@ -28,7 +33,7 @@ lovebootcaptain/handbrakecli-python3:latest
 
 `LoopConverter [file extension to convert]`
 
-- uses `convert` on any file in a folder that matches the `[file extension]`
+- uses `convert` on any file in a folder that matches the `[file extension]
 
 **Example**
 
