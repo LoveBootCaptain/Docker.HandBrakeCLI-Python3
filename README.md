@@ -43,18 +43,18 @@ the `scripts` folder is added to the `PATH` so you can use any of the scripts di
 
 feel free to add and/or **contribute** your own.
 
-`convert` 
+`convert` - use on a file
 
 - lets you convert a single file
 
-`LoopConverter [folder]`
+`LoopConverter` - use in a folder with your source files
 
-- uses `convert` on any file in a folder that matches the `$SOURCE_EXT`
+- uses `convert` on any file in that folder that matches the `$SOURCE_EXT`
 
 **Example**
 
 - `convert my_funny_video.mkv`
-- `LoopConverter /path/to/your/folder/`
+- `cd /path/to/your/folder && LoopConverter`
 
 ### TODO
 
