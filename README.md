@@ -47,14 +47,14 @@ feel free to add and/or **contribute** your own.
 
 - lets you convert a single file
 
-`LoopConverter [file extension to convert]`
+`LoopConverter [folder]`
 
-- uses `convert` on any file in a folder that matches the `[file extension]
+- uses `convert` on any file in a folder that matches the `$SOURCE_EXT`
 
 **Example**
 
 - `convert my_funny_video.mkv`
-- `LoopConverter mkv /path/to/your/folder/`
+- `LoopConverter /path/to/your/folder/`
 
 ### TODO
 
