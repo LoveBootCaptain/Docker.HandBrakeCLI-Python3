@@ -9,17 +9,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV PATH /root/scripts:$PATH
 
-ENV AUDIO_ENCODER aac
-ENV AUDIO_BITRATE 192
-
-ENV VIDEO_ENCODER x264
-ENV VIDEO_FORMAT mp4
-
-ENV CODEC_PRESET veryfast
-ENV CODEC_QUALITY 23
-
-ENV SOURCE_EXT mkv
-
 # set and update repo
 RUN sed -i 's#http://archive.ubuntu.com/#http://tw.archive.ubuntu.com/#' /etc/apt/sources.list \
     && apt-get update
