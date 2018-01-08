@@ -19,17 +19,23 @@ docker build --build-arg SETLANG=de_DE.UTF-8 -t lovebootcaptain/handbrakecli-pyt
 ## Run
 ```bash
 docker run
---entrypoint bash
--v /Volumes/video:/root/input
--v /Volumes/video/transcoded:/root/output
---env SETLANG=de_DE.UTF-8
---env LC_ALL=de_DE.UTF-8
---env LANG=de_DE.UTF-8
---env LANGUAGE=de_DE:de
---env TZ=Europe/Berlin
---name handbrakecli-python3
--h docker-handbrake
-lovebootcaptain/handbrakecli-python3:latest
+    --entrypoint bash
+    -v /Volumes/video:/root/input
+    -v /Volumes/video/transcoded:/root/output
+    --env LC_ALL=de_DE.UTF-8
+    --env LANG=de_DE.UTF-8
+    --env LANGUAGE=de_DE:de
+    --env TZ=Europe/Berlin
+    --env VIDEO_FORMAT=mp4
+    --env SOURCE_EXT=mkv
+    --env AUDIO_ENCODER=aac
+    --env AUDIO_BITRATE=192
+    --env VIDEO_ENCODER=x264
+    --env CODEC_PRESET=veryfast
+    --env CODEC_QUALITY=23
+    --name handbrakecli-python3
+    -h docker-handbrake
+lovebootcaptain/handbrakecli-python3:latest 
 ```
 ## Usage of included scripts
 
@@ -52,6 +58,6 @@ feel free to add and/or **contribute** your own.
 
 ### TODO
 
-- add a watchdog for a folder with python3
-- make watchdog configurable with ENV-variables for `docker run`
-- make `convert` script configurable with ENV-variables for `docker run`
+- [ ] add a watchdog for a folder with python3
+- [ ] make watchdog configurable with ENV-variables for `docker run`
+- [x] make `convert` script configurable with ENV-variables for `docker run`

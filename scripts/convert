@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 NOW=$(date +"%m%d%Y")
 PGMNAME=/usr/bin/HandBrakeCLI
 
@@ -18,10 +19,21 @@ BASEPATH=$(dirname "$1")
 BASEFILE=$(basename "$1")
 FILENAME="${BASEFILE%%.*}"
 
-echo "Starting $NOW"
-${PGMNAME} --input "$1" --format mkv --aencoder aac --ab 192 --encoder x264 --x264-preset veryfast --quality 23 --turbo --encoder-level 4.1 --output "$BASEPATH/$FILENAME.mkv"
+echo "Starting $NOW with VIDEO_FORMAT: $VIDEO_FORMAT AUDIO_ENCODER: $AUDIO_ENCODER AUDIO_BITRATE: $AUDIO_BITRATE VIDEO_ENCODER: $VIDEO_ENCODER CODEC_PRESET: $CODEC_PRESET CODEC_QUALITY: $CODEC_QUALITY"
+
+${PGMNAME} --input "$1" \
+    --format ${VIDEO_FORMAT} \
+    --aencoder ${AUDIO_ENCODER} \
+    --ab ${AUDIO_BITRATE} \
+    --encoder ${VIDEO_ENCODER} \
+    --x264-preset ${CODEC_PRESET} \
+    --quality ${CODEC_QUALITY} \
+    --turbo --encoder-level 4.1 \
+    --output "$BASEPATH/$FILENAME.${VIDEO_FORMAT}"
+
+
 check_errs $? "Failed to convert file $1"
 
-echo "Removing original file."
-rm -f "$1"
-check_errs $? "Failed to remove original file $1"
+# echo "Removing original file."
+# rm -f "$1"
+# check_errs $? "Failed to remove original file $1"

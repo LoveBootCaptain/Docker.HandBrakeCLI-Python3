@@ -1,27 +1,23 @@
 #!/bin/sh
 
-EXT=$1
+EXT=${SOURCE_EXT}
 
-if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied"
-    echo "usage:    LoopConverter [file extension to convert]"
-    echo "e.g.:     LoopConverter mkv /path/to/your/folder"
+echo "transcoding all $SOURCE_EXT files to $VIDEO_FORMAT"
 
-    else
-        for i in *
-            do
-                if [ "${i}" != "${i%.${EXT}}" ];then
+for i in *
+    do
+        if [ "${i}" != "${i%.${EXT}}" ]
+            then
                 echo "convertible file found: $i"
-            fi
-        done
+        fi
+done
 
-        for i in *
-            do
-                if [ "${i}" != "${i%.${EXT}}" ];then
-                    echo "converting file $i"
-                    convert "$i"
-                fi
-        done
-fi
+for i in *
+    do
+        if [ "${i}" != "${i%.${EXT}}" ]
+            then
+                echo "converting file $i"
+                convert "$i"
+        fi
+done
 
