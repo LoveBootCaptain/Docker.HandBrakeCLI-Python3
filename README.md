@@ -60,4 +60,4 @@ feel free to add and/or **contribute** your own.
 
 - [ ] add a watchdog for a folder with python3
 - [ ] make watchdog configurable with ENV-variables for `docker run`
-- [x] make `convert` script configurable with ENV-variables for `docker run`
+- [x] --make `convert` script configurable with ENV-variables for `docker run`--
